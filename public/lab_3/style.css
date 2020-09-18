@@ -14,13 +14,13 @@ body {
   width: 70%;
   min-width: 800px;
   margin: 0 auto;
-  background-color: #6091C3;
+  background-color: #97c7f7;
 }
 
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Times New Roman', Times, serif;
   color: #2a2a2a;
 }
 
@@ -137,5 +137,6 @@ nav a, nav span {
 }
 
 .footer {
+  background-color: rgba(0,255,0,0.5);
   margin-top: 10px;
 }
