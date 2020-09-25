@@ -66,7 +66,7 @@ body > * {
   padding: 1%;
 }
 
-.main, .header, nav, .article, .aside, footer, section {
+.main, .header, nav, .article, .aside, .footer, section {
   background-color: rgba(0,255,0,0.5);
   padding: 1%;
 }
@@ -76,7 +76,7 @@ h1 {
   text-transform: uppercase;
 }
 
-header img {
+.header img {
   display: block;
   height: 60px;
   padding-top: 20.15px;
@@ -139,6 +139,5 @@ nav a, nav span {
 }
 
 .footer {
-  background-color: rgba(0,255,0,0.5);
   margin-top: 10px;
 }
