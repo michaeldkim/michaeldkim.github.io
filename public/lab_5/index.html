@@ -51,7 +51,17 @@
                 <li>
                     <button type="submit" name="submit" id="submit">Submit Form</button>
                 </li>
+                <li>
+                    <button type="activate" name="activate" id="activate">Activate</button>
+                </li>
             </ul>
         </form>
+        function testFunction() {
+            fectch('/api')
+            .then((response) => response.test())
+            .then((response) => {
+                console.log(response);
+            })
+        }
     </body>
 </html>
