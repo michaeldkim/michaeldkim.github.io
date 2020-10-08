@@ -26,6 +26,7 @@
     letter-spacing: 1.2px;
     border-radius: 3px;
     margin-left: 0px;
+    margin-right: 10px;
   }
   .flex-inner li {
     width: 80px;
