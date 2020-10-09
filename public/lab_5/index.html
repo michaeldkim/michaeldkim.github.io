@@ -64,7 +64,9 @@
                 fectch('/api')
                 .then((response) => response.test())
                 .then((response) => {
-                    console.log(response)
+                    const title = document.querySelector('.container h1')
+                    console.log(title)
+                    title.textContent = 'Lab 5 for Michael Kim'
                 })
             }
             function changeLabel() {
