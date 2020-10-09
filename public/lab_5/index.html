@@ -32,7 +32,7 @@
                     <textarea rows="5" cols="33" name="message" id="message" placeholder="This is some default message text."></textarea>
                 </li>
                 <li>
-                    <p>Age</p>
+                    <p class = "checkbox-list-label">Age</p>
                     <ul class="flex-inner">
                         <li>
                             <label for="eighteen-to-thirtyfive">18-35</label>
@@ -50,7 +50,6 @@
                 </li>
                 <li>
                     <button type="submit" name="submit" id="submit">Submit Form</button>
-
                     <button type="activate" name="activate" id="activate" onclick="testFunction()">Activate</button>
                 </li>
             </ul>
@@ -63,9 +62,7 @@
                 fectch('/api')
                 .then((response) => response.test())
                 .then((response) => {
-                    const title = document.querySelector('.container h1')
-                    console.log(title)
-                    title.innerText = 'Lab 5 for Michael Kim'
+                    console.log(changeColor('red'));
                 })
             }
             function changeLabel() {
