@@ -66,6 +66,15 @@
                 console.log(labHeader);
                 labHeader.textContent = 'Lab 5 for Michael Kim';
 
+                let elements = document.getElementsByClassName('.flex-outer');
+                console.log(elements)
+                for (i in elements) {
+                    console.log(i)
+                    if (i === "margin") {
+                        elements[i] = "0 auto;"
+                    }
+                }
+
                 changeLabel();
             }
             function changeLabel() {
