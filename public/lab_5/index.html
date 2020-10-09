@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class="container">
-            <h1>Michael Kim's Lab 4</h1>
+            <h1 class="labHeader">Michael Kim's Lab 4</h1>
         </div>
         <form action="http://localhost:3000/api" method="post">
             <ul class="flex-outer">
@@ -50,7 +50,7 @@
                 </li>
                 <li>
                     <button type="submit" name="submit" id="submit">Submit Form</button>
-                    <button type="activate" name="activate" id="activate" onclick="testFunction()">Activate</button>
+                    <button type="button" name="activate" id="activate" onclick="testFunction()">Activate</button>
                 </li>
             </ul>
         </form>
@@ -62,7 +62,10 @@
                 fectch('/api')
                 .then((response) => response.text())
                 .then((response) => {
+                    let labHeader = document.querySelector('.labHeader');
                     console.log(response);
+                    labHeader.textContent = 'Lab 5 for Michael Kim';
+
                 })
             }
             function changeLabel() {
