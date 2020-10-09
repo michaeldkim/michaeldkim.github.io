@@ -50,7 +50,8 @@
                 </li>
                 <li>
                     <button type="submit" name="submit" id="submit">Submit Form</button>
-                    <button type="activate" name="activate" id="activate" onclick="changeColor('red');changeLabel()">Activate</button>
+
+                    <button type="activate" name="activate" id="activate" onclick="testFunction()">Activate</button>
                 </li>
             </ul>
         </form>
@@ -64,7 +65,7 @@
                 .then((response) => {
                     const title = document.querySelector('.container h1')
                     console.log(title)
-                    title.textContent = 'Lab 5 for Michael Kim'
+                    title.innerText = 'Lab 5 for Michael Kim'
                 })
             }
             function changeLabel() {
