@@ -55,15 +55,14 @@
             </ul>
         </form>
         <script>
-            function changeColor(color) {
-                document.body.style.backgroundColor = color;
-            }
             function testFunction() {
-                fectch('/api')
+                fetch('/api')
                 .then((response) => response.text())
                 .then((response) => {
-                    let labHeader = document.querySelector('.labHeader');
                     console.log(response);
+                    document.querySelector("body").style.backgroundColor = 'red';
+                    let labHeader = document.querySelector('.labHeader');
+                    console.log(labHeader);
                     labHeader.textContent = 'Lab 5 for Michael Kim';
 
                 })
