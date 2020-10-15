@@ -64,7 +64,7 @@
                 document.querySelector("body").style.backgroundColor = 'red';
                 let labHeader = document.querySelector('.labHeader');
                 console.log(labHeader);
-                labHeader.textContent = 'Lab 5 for Michael Kim';
+                labHeader.textContent = 'Lab 5 for Michael Kim'; 
 
                 document.querySelector('.flex-outer').style.margin = "0 auto";
 
@@ -73,7 +73,7 @@
             function changeLabel() {
                 let name = document.querySelector('.checkbox-list-label')
                 name.textContent = 'Fruits'
-                const elements = document.querySelectorAll('.flex-inner li label')
+                const elements = document.querySelector('.flex-inner li label')
                 const fruits = ['kiwi','dragonfruit','pomelo']
                 elements.forEach((el, i) => {
                     const text = el.innerText;
