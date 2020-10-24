@@ -1,7 +1,4 @@
 // You may wish to find an effective randomizer function on MDN.
-
-const { reverse } = require("cypress/types/lodash");
-
 function getRandomIntInclusive(min, max) {
   const min1 = Math.ceil(min);
   const max1 = Math.floor(max);
@@ -46,7 +43,7 @@ document.body.addEventListener('submit', async (e) => {
         return fromServer[number];
       });
 
-      const reverseList = newArr2.sort((org, comp) => sortByKey(org, comp, 'name'));
+      const reverseList = newArr2.sort((org, comp) => sortFunction(org, comp, 'name'));
       const ol = document.createElement('ol');
       ol.className = 'flex-inner';
       $('form').prepend(ol);
