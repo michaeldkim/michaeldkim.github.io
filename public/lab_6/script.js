@@ -43,15 +43,15 @@ document.body.addEventListener('submit', async (e) => {
         return fromServer[number];
       });
 
-      const reverseList = newArr2.sort((org, comp) => sortFunction(org, comp, 'name'));
+      const reverseList = newArr2.sort((org, comp) => sortFunction(comp, org, 'name'));
       const ol = document.createElement('ol');
       ol.className = 'flex-inner';
       $('form').prepend(ol);
 
       reverseList.forEach((el, i) => {
         const li = document.createElement('li');
-        $(li).append('<input type="checkbox" vaue=${el.code} id=${el.code} />');
-        $(li).append('<label for=${el.code}>${el.code}</label');
+        $(li).append(`<input type="checkbox" value=${el.code} id=${el.code} />`);
+        $(li).append(`<label for=${el.code}> ${el.name} </label>`);
         $(ol).append(li);
       });
 
