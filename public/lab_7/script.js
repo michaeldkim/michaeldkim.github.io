@@ -42,7 +42,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     axisY2: {
       interlacedColor: 'rgba(1,77,101,.2)',
       gridColor: 'rgba(1,77,101,.1)',
-      title: 'Change This Title',
+      title: 'categories',
       labelFontSize: 12,
       scaleBreaks: {
         customBreaks: [{
