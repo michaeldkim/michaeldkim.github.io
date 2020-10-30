@@ -10,6 +10,7 @@ body {
 
 .container {
   min-height: 100%;
+  margin: auto;
 }
 
 .header {
