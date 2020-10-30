@@ -31,6 +31,7 @@ app.route('/api')
     const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
     const json = await data.json();
     console.log('Fetch request data', json);
+    res.json(countries);
     res.json(json);
   });
 
