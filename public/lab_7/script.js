@@ -1,5 +1,6 @@
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
+  // eslint-disable-next-line no-unused-vars
   const list = restaurantList.reduce((collection, item, i) => {
     const findCat = collection.find((findItem) => findItem.label === item.category);
 
@@ -14,6 +15,7 @@ function convertRestaurantsToCategories(restaurantList) {
 
     return collection;
   }, []);
+  // eslint-disable-next-line no-console
   console.table(list);
   return list;
 }
@@ -72,6 +74,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
 }
 
 function runThisWithResultsFromServer(jsonFromServer) {
+  // eslint-disable-next-line no-console
   console.log('jsonFromServer', jsonFromServer);
   sessionStorage.setItem('restaurantList', JSON.stringify(jsonFromServer)); // don't mess with this, we need it to provide unit testing support
   // Process your restaurants list
@@ -97,6 +100,7 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((jsonFromServer) => runThisWithResultsFromServer(jsonFromServer))
     .catch((err) => {
+      // eslint-disable-next-line no-console
       console.log(err);
     });
 });
