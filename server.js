@@ -4,7 +4,7 @@
 import fetch from 'node-fetch';
 import express from 'express';
 import dotenv from 'dotenv';
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 import {open} from 'sqlite';
 import sqlite3 from 'sqlite3';
 
@@ -21,10 +21,9 @@ const dbSettings = {
 async function databaseInitialize(dbSettings) {
   try {
     const db = await open(dbSettings);
-    console.log("Success");
-  }
-  catch(e) {
-    console.log("Error loading Database");
+    console.log('Success');
+  } catch (e) {
+    console.log('Error loading Database');
   }
 }
 
