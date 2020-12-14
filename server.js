@@ -4,7 +4,6 @@
 import fetch from 'node-fetch';
 import express from 'express';
 import dotenv from 'dotenv';
-// import fetch from 'node-fetch';
 import {open} from 'sqlite';
 import sqlite3 from 'sqlite3';
 
@@ -18,9 +17,9 @@ const dbSettings = {
   driver: sqlite3.Database
 };
 
-async function databaseInitialize(dbSettings) {
+async function databaseInitialize(datab) {
   try {
-    const db = await open(dbSettings);
+    const db = await open(datab);
     console.log('Success');
   } catch (e) {
     console.log('Error loading Database');
