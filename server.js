@@ -5,11 +5,28 @@ import fetch from 'node-fetch';
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
+import {open} from 'sqlite';
+import sqlite3 from 'sqlite3';
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+const dbSettings = {
+  filename: './tmp/database.db',
+  driver: sqlite3.Database
+};
+
+async function databaseInitialize(dbSettings) {
+  try {
+    const db = await open(dbSettings);
+    console.log("Success");
+  }
+  catch(e) {
+    console.log("Error loading Database");
+  }
+}
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
